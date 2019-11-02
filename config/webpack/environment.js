@@ -1,4 +1,5 @@
 const { environment } = require('@rails/webpacker')
+const svelte = require('./loaders/svelte')
 const coffee =  require('./loaders/coffee')
 const erb =  require('./loaders/erb')
 const elm =  require('./loaders/elm')
@@ -12,4 +13,5 @@ environment.loaders.prepend('typescript', typescript)
 environment.loaders.prepend('elm', elm)
 environment.loaders.prepend('erb', erb)
 environment.loaders.prepend('coffee', coffee)
+environment.loaders.prepend('svelte', svelte)
 module.exports = environment
